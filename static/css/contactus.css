@@ -1,0 +1,480 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    min-height: 120vh;
+}
+
+.contactusdiv {
+    margin-top: 120px;
+}
+
+#error_message {
+    padding: 0px;
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    z-index: 4000;
+
+}
+
+.bdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    min-height: 80vh;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    border-radius: 22px 0px 0px 22px;
+    background: rgb(36, 158, 280);
+    padding: 1rem;
+
+}
+
+.maindiv2 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 22px 22px 0px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.maindiv2 span {
+    text-align: center;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 10px;
+}
+
+.maindiv2 .itemdiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.maindiv2 .itemdiv span {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+
+.maindiv2 .itemdiv p {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 0.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.maindiv2 .socialhandles {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.maindiv2 .socialhandles .socialimgs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.maindiv2 .socialhandles img {
+    width: 28px;
+    height: 28px;
+}
+
+
+
+
+.maindiv form {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.maindiv .titleMD {
+    text-align: center;
+
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 2rem;
+}
+
+.maindiv form .itemrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+
+}
+
+.maindiv form div input {
+    padding: 0.6rem;
+    margin: 1em;
+    width: 280px;
+    font-size: 1em;
+}
+
+.maindiv form .container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.maindiv form h1 {
+    text-align: start;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* dropdown */
+/* Google Fonts - Poppins */
+
+.container2 {
+    position: relative;
+    width: 100%;
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+.maindiv form .container2 {
+    width: 75%;
+}
+
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.select-input {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: white;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn .btn-text {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+}
+
+.select-btn .arrow-dwn {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    margin-left: 6px;
+}
+
+.select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.list-items {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-btn.open~.list-items {
+    display: block;
+}
+
+.list-items .item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.list-items .item:hover {
+    background-color: #e7edfe;
+}
+
+.item .item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .checkbox {
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+
+.checkbox .check-icon {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.item.checked .check-icon {
+    transform: scale(1);
+}
+
+
+
+/* dropdown End*/
+.forthrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.forthrow button {
+    padding: 12px;
+    background: white;
+    text-align: center;
+    color: black;
+    outline: none;
+    border: 0px;
+    border-radius: 30px;
+    font-size: 1.3em;
+    width: 160px;
+    margin: 10px;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    header {
+        position: fixed;
+        background: white;
+    }
+
+    header .logo {
+        margin-left: 0px;
+        font-size: 1.2em;
+    }
+
+    header nav{
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin: 0.3rem;
+    }
+
+    header div nav ul li {
+        font-size: 1.2rem;
+    }
+
+    header div nav ul {
+        margin-top: 10px;
+    }
+
+    .contactusdiv {
+        margin-top: 10rem;
+    }
+
+    .bdiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maindiv {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        margin: auto;
+        border-radius: 0px;
+        margin-top: 0px;
+    }
+
+    .maindiv span {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 0px;
+
+    }
+
+    .maindiv form {
+        margin-top: 0px;
+    }
+
+    .maindiv form .itemrow {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 6px;
+    }
+
+    .maindiv form .itemrow .container2 {
+        display: flex;
+        width: 100%;
+        margin-top: 6px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maindiv form .itemrow .container2 ul li span {
+        text-align: start;
+    }
+
+    .maindiv form .itemrow .container2 .select-btn {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 0px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+
+    }
+
+    .maindiv form div input {
+        padding: 0.8rem;
+        margin: 1em;
+        width: 100%;
+        font-size: 1rem;
+        margin-left: 40px;
+        margin-right: 40px;
+        color: black;
+    }
+
+    .maindiv span {
+        display: inline-block;
+        margin: 16px auto;
+    }
+
+    /* Main Div 2 Mobile */
+    /* Main Div 2 Mobile */
+    .maindiv2 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0px 0px;
+        border-radius: 0px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+        padding: 0rem;
+    }
+
+    .maindiv2 span {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 0px;
+        margin-top: 2rem;
+    }
+
+    .maindiv2 .itemdiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .maindiv2 .itemdiv span {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .maindiv2 .itemdiv p {
+        padding: 0px 12px 0px 12px;
+        margin: 6px 0px 6px 0px;
+    }
+
+    /* Main Div 2 Mobile */
+    /* Main Div 2 Mobile */
+
+}
+
+
+
+/* Media Query for Tablets Ipads portrait mode */
+/*@media (min-width: 768px) and (max-width: 1024px) {}*/
+@media (min-width: 481px) and (max-width: 1024px) {}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {}

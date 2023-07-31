@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact {% endblock title %}
+{% block tabHome %} text-black {% endblock tabHome %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/contactus.css' %}" />
+{% endblock style %}
+{% block body %}
+<div class="contactusdiv"></div>
+<div id="error_message"></div>
+<div class="bdiv">
+    <div class="maindiv">
+        <span class="titleMD">Get In Touch</span>
+        <form action="" method="post">
+            <div class="itemrow">
+                <input type="text" placeholder="Name" class="select-input" id="inpName" value="">
+                <input type="email" placeholder="Email" class="select-input" id="inpEmail" value="">
+            </div>
+            <div class="itemrow">
+                <input type="number" name="phno" maxlength="10" placeholder="Phone Number" class="select-input"
+                    id="inpPhno" value="">
+            </div>
+            <div class="itemrow">
+                <div class="container2">
+                    <div class="select-btn">
+                        <span class="btn-text">Select Services</span>
+                        <span class="arrow-dwn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+
+                    </div>
+                    <ul class="list-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Mutual Funds</span>
+
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Health Insurance/Mediclaim</span>
+
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Portfolio Management Services</span>
+
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Vehicle Insurance</span>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="forthrow">
+                <button type="button" onclick="validateandUpload()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="maindiv2">
+        <span>Contact Details</span>
+        <div class=" itemdiv">
+            <span>Phone</span>
+            <div>
+                <p>+91 9422855786</p>
+                <p>+91 9422855786</p>
+            </div>
+        </div>
+        <div class=" itemdiv">
+            <span>Email</span>
+            <p>kadlaginvestment@gmail.com</p>
+        </div>
+        <div class=" itemdiv">
+            <span>Address</span>
+            <p>Second Floor, Gaurav Hotel, Top Ten Imperial, near Malpani Bajaj Showroom, near Panchavati, Sangamner,
+                Maharashtra 422605</p>
+        </div>
+        <div class="itemdiv socialhandles">
+            <span>Social Handles</span>
+            <div class="socialimgs">
+                <a href="https://www.instagram.com/kadlaginvestment/" target="_blank"><img
+                        src="{% static 'images/insta_logo.png' %}" alt=""></a>
+                <a href="https://www.facebook.com/people/Kadlag-Investment/100063992326440/?mibextid=LQQJ4d"
+                    target="_blank"><img src="{% static 'images/facebook_logo.png' %}" alt=""></a>
+                <a href="https://wa.me/9422855786" target="_blank"><img src="{% static 'images/whatsapp_logo.png' %}"
+                        alt=""></a>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+
+    const selectBtn = document.querySelector(".select-btn"),
+        items = document.querySelectorAll(".item");
+
+    selectBtn.addEventListener("click", () => {
+        selectBtn.classList.toggle("open");
+    });
+
+    const selected = document.querySelectorAll('.mainselection')
+    selected.forEach(item => {
+
+    })
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("checked");
+
+            let checked = document.querySelectorAll(".checked"),
+                btnText = document.querySelector(".btn-text");
+
+            if (checked && checked.length > 0) {
+                btnText.innerText = `${checked.length} Selected`;
+            } else {
+                btnText.innerText = "Select Language";
+            }
+        });
+    })
+
+    function validateandUpload() {
+        console.log("Log Started")
+        let name = document.getElementById("inpName")?.value.toString() || ""
+        let email = document.getElementById("inpEmail")?.value.toString() || ""
+        let phno = document.getElementById("inpPhno")?.value.toString() || ""
+        let str = ''
+        let checked = document.querySelectorAll(".checked")
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\s*\+?(\d[\d\s\-().]*)$/;
+        var error_message = document.getElementById("error_message");
+        error_message.style.padding = "0px";
+        const nameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        let valid = true;
+
+        if (!nameRegex.test(name)) {
+            error_message.style.padding = "10px";
+            text = "Please Enter valid Name";
+            error_message.innerHTML = text;
+            valid = false
+        }
+
+        if (!emailRegex.test(email)) {
+            error_message.style.padding = "10px";
+            text = "Please Enter valid Email";
+            error_message.innerHTML = text;
+            valid = false
+        }
+        if (!phoneRegex.test(phno)) {
+            error_message.style.padding = "10px";
+            text = "Please Enter valid Phone Number";
+            error_message.innerHTML = text;
+            valid = false
+        }
+
+
+
+
+        let selected = Array.from(checked)
+        str = str + "Name = " + name + "\n"
+        str = str + "Name = " + name.length + "\n"
+        str = str + "Email = " + email + "\n"
+        str = str + "Phone = " + phno + "\n"
+        str = str + "Services"
+        selected.forEach(elem => {
+            str = str + "\n" + elem.outerText
+        })
+        console.log(str)
+        if (valid) {
+            error_message.innerHTML = "";
+            error_message.style.padding = "0px";
+            console.log("All valid Data")
+
+        } else {
+            console.log("Enter valid Data")
+        }
+    }
+</script>
+</div>
+{% endblock body %}

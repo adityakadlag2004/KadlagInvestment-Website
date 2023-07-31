@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+{% block tabHome %} text-black {% endblock tabHome %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock style %}
+{% block body %}
+<div class="aboutdiv"></div>
+<div class="mainbody">
+    <div class="logopassagediv">
+        <img src="{% static 'images/background.jpeg' %}" alt="" class="divlogo" />
+        <p>{{div1passage}}</p>
+    </div>
+    <div class="achievementsdiv">
+        <span>Achievements</span>
+        <div class="infodiv">
+            <div class="infoitem">
+                <img src="{% static '' %}uptrend3.png" alt="" class="">
+                <span class="infoititle">100CR+ AUM</span>
+                <p class="infopara">{{aumdes}}</p>
+            </div>
+
+
+            <div class="infoitem">
+                <img src="{% static '' %}happycus.jpg" alt="" class="">
+                <span class="infoititle">2500+ Customers</span>
+                <p class="infopara">{{cusdes}}</p>
+            </div>
+
+            <div class="infoitem">
+                <img src="{% static '' %}25years.png" alt="" class="">
+                <span class="infoititle">25+ Years in Business</span>
+                <p class="infopara">{{yeardes}}</p>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

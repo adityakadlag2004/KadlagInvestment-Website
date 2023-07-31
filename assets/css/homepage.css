@@ -1,0 +1,584 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Page Body */
+.homepagediv {
+    display: flex;
+    width: 100%;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Typewritter */
+.typewritterdiv {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .typewritterdiv img{
+    z-index: -20;
+    position: absolute;
+    max-height: 100vh;
+    object-fit: cover;
+} */
+
+
+
+.typewritterdiv h1 {
+    font-size: 2.5em;
+    color: black;
+    position: relative;
+    text-align: center;
+}
+
+.typewritterdiv h1::after {
+    content: '!';
+    position: absolute;
+    color: black;
+    right: 0;
+    background: white;
+    width: 100%;
+    animation: typing 2s steps(22);
+
+    animation-fill-mode: forwards;
+}
+
+.typewritterdiv p {
+    color: gray;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.div-button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 22px;
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+    width: 8rem;
+}
+
+.div-button:hover {
+    animation: hoverBtnChange 1s forwards;
+}
+
+
+@keyframes hoverBtnChange {
+    to {
+        color: black;
+        background: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
+    }
+
+    form {
+        color: white;
+        background: black;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.00);
+    }
+}
+
+@keyframes hoverBtnChangeNormal {
+    to {
+        color: white;
+        background: black;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.00);
+    }
+
+    form {
+        color: black;
+        background: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
+    }
+}
+
+@keyframes typing {
+    to {
+        width: 0%;
+    }
+
+}
+
+/* Typewritter End*/
+
+/* Mutual Fund Div */
+.mutualfunddiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    ;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mutusub1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mutusub1 h1 {
+    font-size: 3em;
+}
+
+.mutusub1 img {
+    object-fit: cover;
+    width: 680px;
+    height: 680px;
+}
+
+.mutusub1 p {
+    padding: 3rem;
+    line-height: 2.4rem;
+    line-break: auto;
+    font-size: 1.6rem;
+}
+
+#hiddenmf{
+    display: hidden;
+}
+
+
+
+/* media */
+@media (max-width: 2000px) {
+    .mutualfunddiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 50vh;
+        ;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .mutusub1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .mutusub1 img {
+        object-fit: cover;
+        width: 520px;
+        height: 520px;
+    }
+
+    .mutusub1 p {
+        padding-left: 1.5rem;
+        line-height: 2rem;
+        line-break: auto;
+        font-size: 1.2rem;
+    }
+
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .container-nav {
+        width: 100%;
+    }
+    header {
+        position: fixed;
+        background: white;
+    }
+
+    header .logo {
+        margin-left: 0px;
+        font-size: 1.2em;
+    }
+
+    nav li {
+        margin: 0.4rem;
+    }
+
+    header div nav ul li {
+        font-size: 1.5rem;
+    }
+
+    header div nav ul {
+        margin-top: 10px;
+    }
+
+    .homepagediv {
+        display: none;
+    }
+
+    .typewritterdiv {
+        display: flex;
+        width: 100%;
+        min-height: max-content;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 14rem;
+    }
+
+    .typewritterdiv p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .div-button {
+        margin-top: 10px;
+    }
+
+    .typewritterdiv h1 {
+        font-size: 1.3em;
+        color: black;
+        position: relative;
+        text-align: center;
+    }
+
+    .mutualfunddiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .mutusub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .mutusub1 img {
+        width: 240px;
+        height: 250px;
+
+    }
+
+    .mutusub1 p {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 0rem;
+        line-height: 1.6rem;
+        line-break: auto;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
+
+/* media */
+
+
+/* Mutual Fund Div End */
+/* Insurance Fund Div Start */
+.insurancediv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    ;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.insusub1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2rem;
+}
+
+.insusub1 h1 {
+    font-size: 3em;
+}
+
+.insusub1 img {
+    object-fit: cover;
+    width: 680px;
+    height: 680px;
+}
+
+.insusub1 p {
+    padding: 3rem;
+    line-height: 2.4rem;
+    line-break: auto;
+    font-size: 1.6rem;
+}
+
+.insurancediv span {
+    color: black;
+    font-size: 2rem;
+
+}
+
+@media (max-width: 2000px) {
+    .insurancediv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 50vh;
+        ;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .insusub1 {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .insusub1 img {
+        object-fit: cover;
+        width: 520px;
+        height: 520px;
+        border-radius: 22px;
+    }
+
+    .insusub1 p {
+        line-height: 2rem;
+        font-size: 1.2rem;
+        margin-right: 1.5rem;
+        line-break: strict;
+    }
+
+    .insurancediv span {
+        color: black;
+        font-size: 1rem;
+
+    }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .insurancediv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .insusub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .insusub1 img {
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .insusub1 p {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 0rem;
+        line-height: 1.8rem;
+        line-break: auto;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .insurancediv span {
+        color: black;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* Insurance  Div End */
+
+/* Mediclaim  Div Start */
+.mediclaimdiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    ;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.medisub1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+}
+
+.medisub1 h1 {
+    font-size: 3em;
+}
+
+.medisub1 img {
+    object-fit: cover;
+    width: 680px;
+    height: 680px;
+}
+
+.medisub1 p {
+    padding: 3rem;
+    line-height: 2.4rem;
+    line-break: auto;
+    font-size: 1.6rem;
+}
+
+.mediclaimdiv span {
+    color: black;
+    font-size: 2rem;
+
+}
+
+/* media */
+@media (max-width: 2000px) {
+    .mediclaimdiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 50vh;
+        ;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .medisub1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .medisub1 img {
+        object-fit: cover;
+        width: 520px;
+        height: 520px;
+    }
+
+    .medisub1 p {
+        padding-left: 1.5rem;
+        line-height: 2rem;
+        line-break: auto;
+        font-size: 1.2rem;
+    }
+
+    .mediclaimdiv span {
+        color: black;
+        font-size: 1rem;
+
+    }
+}
+
+@media (max-width: 640px) {
+    .mediclaimdiv {
+        display: flex;
+        flex-direction: column;
+        ;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .medisub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .medisub1 img {
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .medisub1 p {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 0rem;
+        line-height: 1.8rem;
+        line-break: auto;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .mediclaimdiv span {
+        color: black;
+        font-size: 1rem;
+        text-align: center;
+
+    }
+}
+
+/* Mediclaim  Div End */
+
+/* ipad */
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .homepagediv {
+        padding-top: 0px;
+    }
+
+    .mutusub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .insusub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .medisub1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .mediclaimdiv span {
+        color: black;
+        text-align: center;
+        font-weight: 400;
+
+    }
+
+    .insurancediv span {
+        color: black;
+        text-align: center;
+        font-weight: 400;
+
+    }
+
+    header.sticky ul li a {
+        color: black;
+    }
+}

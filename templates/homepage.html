@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block tabHome %} text-black {% endblock tabHome %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+{% endblock style %} {% block body %}
+<div class="homepagediv"></div>
+
+<div class="typewritterdiv">
+    <div class="wrapper">
+        <h1 class="typing-demo">Do something today that your Future self will thank you for!</h1>
+        <p>
+            Discover investment approach to stable and reliable growth with Kadlag
+            investment
+        </p>
+    </div>
+
+    <div class="div-button" id="btn-started" onclick="scrollToDiv('mutualfunddiv1')">Get Started</div>
+</div>
+<div class="mutualfunddiv" id="mutualfunddiv1">
+    <h1>Mutual Funds</h1>
+    <div class="mutusub1">
+        <img src="{% static 'images/nayerules.jpg' %}" alt="" class="divlogo" />
+
+        <p>{{passagemf}}</p>
+
+    </div>
+</div>
+<div class="insurancediv" id="insurancediv1">
+    <h1>Life Insurance</h1>
+    <div class="insusub1">
+        <img src="{% static 'images/lifeinsurance2.jpg' %}" alt="" class="divlogo" />
+        <p>{{passageins}}</p>
+    </div>
+    <span>Life Insurance of All Compamnies in India is provided by Kadlag Investment</span>
+</div>
+<div class="mediclaimdiv" id="mediclaimdiv1">
+    <h1>Mediclaim</h1>
+    <div class="medisub1">
+        <img src="{% static 'images/star.jpg'%}" alt="" class="divlogo" />
+        <p>{{passagemedi}}</p>
+    </div>
+    <span>Health Insurance of All Compamnies in India is provided by Kadlag Investment</span>
+</div>
+
+
+
+
+{% endblock body %}
+{% block script %}
+
+function scrollToDiv(divid) {
+var div = document.getElementById(divid);
+div.scrollIntoView({ behavior: 'smooth' });
+}
+
+{% endblock script %}
