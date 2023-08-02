@@ -97,7 +97,7 @@ body {
 }
 
 .mainbody .achievementsdiv .infodiv .infoitem p {
-    
+
     font-size: 1rem;
     line-break: auto;
     text-align: center;
@@ -120,6 +120,7 @@ body {
         position: fixed;
         background: white;
     }
+
 
     header .logo {
         margin-left: 0px;
@@ -167,7 +168,6 @@ body {
     .mainbody .achievementsdiv .infoitem {
         display: flex;
         flex-direction: column;
-        border: 2px solid red;
         width: 100%;
         justify-content: center;
 
@@ -220,6 +220,7 @@ body {
     header div nav ul {
         margin-top: 10px;
     }
+
     .aboutdiv {
         display: flex;
         width: 100%;
@@ -228,9 +229,49 @@ body {
         align-items: center;
     }
 
-    body{
-        min-height: 180vh;
+
+    .mainbody .logopassagediv img {
+        margin-top: 2rem;
+        width: 100%;
     }
+
+    .mainbody .logopassagediv p {
+        text-align: center;
+        padding: 0px 24px 0px 24px;
+        white-space: pre-wrap;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        font-weight: 400;
+    }
+
+
+    .mainbody .achievementsdiv .infodiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .mainbody .achievementsdiv .infoitem {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .achievementsdiv span {
+        text-align: center;
+    }
+
+    .mainbody .achievementsdiv .infodiv .infoitem img {}
+
+    .mainbody .achievementsdiv .infodiv .infoitem span {}
+
+    .mainbody .achievementsdiv .infodiv .infoitem p {}
+
 }
 
 /* Media Query for Laptops and Desktops */
@@ -238,3 +279,29 @@ body {
 
 /* Media Query for Large screens */
 @media (min-width: 1281px) {}
+
+
+/* Animations */
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+/* Animations */
+/* Animations */

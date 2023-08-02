@@ -34,7 +34,7 @@ body {
 
 
 
-.typewritterdiv h1 {
+.typewritterdiv span {
     display: inline-block;
     font-size: 2.5em;
     color: black;
@@ -57,7 +57,7 @@ body {
     place-items: center;
 }
 
-.typing-demo h1 {
+.typing-demo span {
     width: 100%;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
@@ -212,7 +212,7 @@ body {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-    .typewritterdiv h1 {
+    .typewritterdiv span {
         display: inline-block;
         font-size: 2.5em;
         color: black;
@@ -220,20 +220,22 @@ body {
         text-align: center;
         white-space: break-spaces;
         overflow: hidden;
-        width: 100%;
+        width: 80%;
         animation: none;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .typewritterdiv p{
+
+    .typewritterdiv p {
         margin-top: 1rem;
     }
-    .typing-demo h1 {
+
+    .typing-demo span {
         width: 100%;
         text-align: center;
-        font-size: 1.2rem;        
+        font-size: 1.2rem;
     }
-    
+
     .container-nav {
         width: 100%;
     }
@@ -283,7 +285,7 @@ body {
         margin-top: 10px;
     }
 
-    .typewritterdiv h1 {
+    .typewritterdiv span {
         font-size: 1.3em;
         color: black;
         position: relative;
@@ -575,8 +577,46 @@ body {
 
 /* Mediclaim  Div End */
 
-/* ipad */
-@media all and (min-width: 768px) and (max-width: 1200px) {
+/* Media Query for Tablets Ipads portrait mode */
+/*@media (min-width: 768px) and (max-width: 1024px) {}*/
+@media (min-width: 481px) and (max-width: 1024px) {
+    .typewritterdiv .wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .typewritterdiv span {
+        display: inline-block;
+        font-size: 2em;
+        color: black;
+        position: relative;
+        text-align: center;
+        white-space: pre-wrap;
+        overflow: visible;
+        width: 80%;
+        animation: none;
+        /* animation-fill-mode: forwards; */
+    }
+
+    .typewritterdiv p {
+        text-align: center;
+    }
+
+
+    .typing-demo span {
+        display: inline-block;
+        width: 100%;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        border-right: 3px solid;
+        text-align: center;
+        font-size: 2em;
+        white-space: pre-wrap;
+        overflow: auto;
+    }
+
     .homepagediv {
         padding-top: 0px;
     }
@@ -588,6 +628,10 @@ body {
         padding: 2rem;
     }
 
+    .mutusub1 p {
+        text-align: center;
+    }
+
     .insusub1 {
         display: flex;
         flex-direction: column;
@@ -595,11 +639,19 @@ body {
         padding: 2rem;
     }
 
+    .insusub1 p {
+        text-align: center;
+    }
+
     .medisub1 {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2rem;
+    }
+
+    .medisub1 p {
+        text-align: center;
     }
 
     .mediclaimdiv span {

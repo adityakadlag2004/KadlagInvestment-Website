@@ -10,7 +10,8 @@
 <div class="bdiv">
     <div class="maindiv">
         <span class="titleMD">Get In Touch</span>
-        <form action="" method="post">
+        <form action="" method="POST">
+            {% csrf_token %}
             <div class="itemrow">
                 <input type="text" placeholder="Name" class="select-input" id="inpName" value="">
                 <input type="email" placeholder="Email" class="select-input" id="inpEmail" value="">
