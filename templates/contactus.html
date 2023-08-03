@@ -30,31 +30,27 @@
 
                     </div>
                     <ul class="list-items">
-                        <li class="item">
-                            <span class="checkbox">
-                                <i class="fa-solid fa-check check-icon"></i>
-                            </span>
+                        <li class="item checkboxitemdiv" onclick="validateSelections(1)">
+                            <input class="checkbox" type="checkbox" name="service" value="1" id="cb1">
                             <span class="item-text">Mutual Funds</span>
 
                         </li>
-                        <li class="item">
-                            <span class="checkbox">
-                                <i class="fa-solid fa-check check-icon"></i>
-                            </span>
+                        <li class="item" onclick="validateSelections(2)">
+                            <input class="checkbox" id="cb2" type="checkbox">
                             <span class="item-text">Health Insurance/Mediclaim</span>
 
                         </li>
-                        <li class="item">
-                            <span class="checkbox">
-                                <i class="fa-solid fa-check check-icon"></i>
-                            </span>
+                        <li class="item" onclick="validateSelections(3)">
+                            <input class="checkbox" id="cb3" type="checkbox">
+                                
+                
                             <span class="item-text">Portfolio Management Services</span>
 
                         </li>
-                        <li class="item">
-                            <span class="checkbox">
-                                <i class="fa-solid fa-check check-icon"></i>
-                            </span>
+                        <li class="item" onclick="validateSelections(4)">
+                            <input class="checkbox" id="cb4" type="checkbox">
+                            
+                            
                             <span class="item-text">Vehicle Insurance</span>
 
                         </li>
@@ -111,11 +107,6 @@
         selectBtn.classList.toggle("open");
     });
 
-    const selected = document.querySelectorAll('.mainselection')
-    selected.forEach(item => {
-
-    })
-
     items.forEach(item => {
         item.addEventListener("click", () => {
             item.classList.toggle("checked");
@@ -128,6 +119,41 @@
             }
         });
     })
+
+    function validateSelections(num) {
+        let clickeddiv = document.querySelectorAll(".checkboxitemdiv")
+        let cb1 = document.getElementById("cb1")
+        let cb2 = document.getElementById("cb2")
+        let cb3 = document.getElementById("cb3")
+        let cb4 = document.getElementById("cb4")
+        console.log(num)
+        switch (num) {
+            case 1:
+                toggleCheckBox(cb1);
+                break;
+            case 2:
+                toggleCheckBox(cb2);
+                break;
+            case 3:
+                toggleCheckBox(cb3);
+                break;
+            case 4:
+                toggleCheckBox(cb4);
+                break;
+        }
+
+        console.log(clickeddiv.childNodes)
+    }
+
+    function toggleCheckBox(cb) {
+        if (cb.checked == false) {
+            cb.checked = true;
+        } else {
+            cb.checked = false;
+        }
+    }
+
+
 
     function validateandUpload() {
         console.log("Log Started")

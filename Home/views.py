@@ -21,7 +21,8 @@ def contact_us(request):
         name = request.POST['fname']
         email = request.POST['femail']
         phno = request.POST['fphno']
-        print(name,email,phno)
+        services = request.POST.getlist('service')
+        print(name, email, phno, services)
 
     return render(request, 'contactus.html')
 

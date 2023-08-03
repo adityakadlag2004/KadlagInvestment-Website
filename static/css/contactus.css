@@ -393,6 +393,9 @@ body {
     .maindiv form .itemrow .container2 ul li span {
         text-align: start;
     }
+    .maindiv form .itemrow .container2 ul li input {
+        text-align: start;
+    }
 
     .maindiv form .itemrow .container2 .select-btn {
         display: flex;
