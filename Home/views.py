@@ -17,8 +17,12 @@ def test_page(request):
 
 
 def contact_us(request):
-    if request.POST:
-        name = request.POST['name']
+    if request.method == "POST":
+        name = request.POST['fname']
+        email = request.POST['femail']
+        phno = request.POST['fphno']
+        print(name,email,phno)
+
     return render(request, 'contactus.html')
 
 
