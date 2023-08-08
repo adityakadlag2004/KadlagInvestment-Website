@@ -324,7 +324,7 @@ body {
         font-size: 1.2em;
     }
 
-    header nav{
+    header nav {
         margin-top: 10px;
     }
 
@@ -393,6 +393,7 @@ body {
     .maindiv form .itemrow .container2 ul li span {
         text-align: start;
     }
+
     .maindiv form .itemrow .container2 ul li input {
         text-align: start;
     }
@@ -474,7 +475,110 @@ body {
 
 /* Media Query for Tablets Ipads portrait mode */
 /*@media (min-width: 768px) and (max-width: 1024px) {}*/
-@media (min-width: 481px) and (max-width: 1024px) {}
+@media (min-width: 481px) and (max-width: 1024px) {
+    .bdiv {
+        flex-direction: column;
+    }
+
+    .maindiv {
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maindiv form .container2 {
+        width: 100%;
+    }
+
+    .maindiv form .itemrow {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+    }
+
+    .select-btn {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+    }
+
+    .maindiv2 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0px 0px;
+        border-radius: 0px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+        padding: 0rem;
+    }
+
+    .maindiv2 span {
+        width: 100%;
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 0px;
+        margin-top: 2rem;
+    }
+
+    .maindiv2 .itemdiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .maindiv2 .itemdiv span {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .maindiv2 .itemdiv p {
+        padding: 0px 12px 0px 12px;
+        margin: 6px 0px 6px 0px;
+        font-size: 1.2rem;
+    }
+
+    .maindiv .titleMD {
+        text-align: center;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 500;
+        color: white;
+        margin-top: 2rem;
+    }
+
+    .maindiv form div input {
+        padding: 0.6rem;
+        margin: 1em;
+        width: 420px;
+        font-size: 1.2em;
+    }
+
+    .maindiv2 .socialhandles {
+        margin-bottom: 4rem;
+    }
+
+    .maindiv2 .socialhandles .socialimgs {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+}
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {}

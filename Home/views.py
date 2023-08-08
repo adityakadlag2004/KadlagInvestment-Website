@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from .models import CustomerForm
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 
 
 def home(request):
@@ -17,14 +20,42 @@ def test_page(request):
 
 
 def contact_us(request):
+    return render(request, 'contactus.html')
+
+
+def contactDataSubmit(request):
+    error = None
     if request.method == "POST":
         name = request.POST['fname']
         email = request.POST['femail']
         phno = request.POST['fphno']
         services = request.POST.getlist('service[]')
-        print(name, email, phno, services)
+        if not name:
+            error = "Name Required"
+        elif len(name) < 10:
+            error = "Enter Full Name"
 
-    return render(request, 'contactus.html')
+        if not email:
+            error = "Email Required"
+        try:
+            validate_email(email)
+        except ValidationError as e:
+            error = "Enter Valid Email"
+            print("bad email, details:", e)
+        else:
+            print("good email")
+
+        print(name, email, phno, services)
+        if error == None:
+            customer = CustomerForm(
+                name=name, email=email, phno=phno, services=services)
+            customer.save()
+            print("Data Saved")
+            return render(request, 'homepage.html')
+
+        else:
+            print("Data Not Saved")
+            return render(request, 'contactus.html', {"error": error, "name": name, "email": email, "phno": phno, "padding": '10px'})
 
 
 def about(request):
