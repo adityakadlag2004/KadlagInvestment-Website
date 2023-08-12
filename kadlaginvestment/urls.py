@@ -22,4 +22,4 @@ from django.conf import settings
 urlpatterns = [
     path('dashboard/kadlaginvestment/admin/', admin.site.urls),
     path("", include('Home.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  
