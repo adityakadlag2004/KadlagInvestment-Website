@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'web/css/base.css' %}">
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>
         {% block title %}
@@ -22,7 +22,7 @@
     <header>
         <div class="container container-nav">
             <div class="logodiv">
-                <img src="{% static 'web/images/logo_main.png' %}" alt="" class="imglogo">
+                <img src="{% static '/images/logo_main.png' %}" alt="" class="imglogo">
                 <a href="" class="logo">Kadlag Investment</a>
                 <label for="check" class="pc-hide" id="nav-open-close" onclick="toggleNavBtn()">
                     <input type="checkbox" id="check" />
@@ -43,7 +43,7 @@
 
                                 <div class="serviceitem" onclick="show('Mutual Funds')">
                                     <div class="optionimageicon" onclick="scrollToDiv('mutualfunddiv1')">
-                                        <img src="{% static 'web/images/mutuicon2.png' %}" alt="" class="optionimage">
+                                        <img src="{% static '/images/mutuicon2.png' %}" alt="" class="optionimage">
                                         Mutual Funds
                                     </div>
                                 </div>
@@ -51,12 +51,12 @@
 
                                 <div class="serviceitem" onclick="show('Insurance')">
                                     <div class="optionimageicon" onclick="scrollToDiv('insurancediv1')"><img
-                                            src="{% static 'web/images/insurance.png' %}" alt="" class="optionimage">Life
+                                            src="{% static '/images/insurance.png' %}" alt="" class="optionimage">Life
                                         Insurance</div>
                                 </div>
                                 <div class="serviceitem" onclick="show('Mediclaim')">
                                     <div class="optionimageicon" onclick="scrollToDiv('mediclaimdiv1')"><img
-                                            src="{% static 'web/images/mediclaim.png' %}" alt=""
+                                            src="{% static '/images/mediclaim.png' %}" alt=""
                                             class="optionimage">Mediclaim</div>
                                 </div>
 

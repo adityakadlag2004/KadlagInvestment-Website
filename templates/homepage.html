@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock title %}
 {% block tabHome %} text-black {% endblock tabHome %} {% block style %}
-<link rel="stylesheet" href="{% static 'web/css/homepage.css' %}" />
+<link rel="stylesheet" href="{% static '/css/homepage.css' %}" />
 {% endblock style %} {% block body %}
 <div class="homepagediv"></div>
 
@@ -20,7 +20,7 @@
 <div class="mutualfunddiv" id="mutualfunddiv1">
     <h1>Mutual Funds</h1>
     <div class="mutusub1">
-        <img src="{% static 'web/images/nayerules.jpg' %}" alt="" class="divlogo" />
+        <img src="{% static '/images/nayerules.jpg' %}" alt="" class="divlogo" />
         <p class="fullpassage">{{passagemf}}</p>
 
 
@@ -29,7 +29,7 @@
 <div class="insurancediv" id="insurancediv1">
     <h1>Life Insurance</h1>
     <div class="insusub1">
-        <img src="{% static 'web/images/lifeinsurance2.jpg' %}" alt="" class="divlogo" />
+        <img src="{% static '/images/lifeinsurance2.jpg' %}" alt="" class="divlogo" />
         <p>{{passageins}}</p>
     </div>
     <span>Life Insurance of All Compamnies in India is provided by Kadlag Investment</span>
@@ -37,7 +37,7 @@
 <div class="mediclaimdiv" id="mediclaimdiv1">
     <h1>Mediclaim</h1>
     <div class="medisub1">
-        <img src="{% static 'web/images/star.jpg'%}" alt="" class="divlogo" />
+        <img src="{% static '/images/star.jpg'%}" alt="" class="divlogo" />
         <p>{{passagemedi}}</p>
     </div>
     <span>Health Insurance of All Compamnies in India is provided by Kadlag Investment</span>
