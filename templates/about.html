@@ -3,14 +3,14 @@
 {% block title %} About {% endblock title %}
 {% block tabHome %} text-black {% endblock tabHome %}
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'web/css/about.css' %}" />
 {% endblock style %}
 {% block body %}
 <div class="aboutdiv"></div>
 <div class="mainbody">
     <div class="logopassagediv">
 
-        <img src="{% static 'images/background.jpeg' %}" alt="" class="divlogo" />
+        <img src="{% static 'web/images/background.jpeg' %}" alt="" class="divlogo" />
         <p>{{div1passage}}</p>
     </div>
     <div class="achievementsdiv">
@@ -18,7 +18,7 @@
         <div class="infodiv">
             <div class="infoitem">
 
-                <img src="{% static 'images/uptrend3.png' %}" alt="" class="">
+                <img src="{% static 'web/images/uptrend3.png' %}" alt="" class="">
                 <span class="infoititle">100CR+ AUM</span>
                 <p class="infopara">{{aumdes}}</p>
             </div>
@@ -27,13 +27,13 @@
             <div class="infoitem">
 
 
-                <img src="{% static '' %}images/happycus.jpg" alt="" class="">
+                <img src="{% static '' %}web/images/happycus.jpg" alt="" class="">
                 <span class="infoititle">2500+ Customers</span>
                 <p class="infopara">{{cusdes}}</p>
             </div>
 
             <div class="infoitem">
-                <img src="{% static '' %}images/25years.png" alt="" class="">
+                <img src="{% static '' %}web/images/25years.png" alt="" class="">
                 <span class="infoititle">25+ Years in Business</span>
                 <p class="infopara">{{yeardes}}</p>
             </div>
