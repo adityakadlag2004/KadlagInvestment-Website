@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-xk8)mp%*7#do0&o4_*96y9fd7h1n&b*v3d7mubu0af)l9k+1@v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['139.59.28.237','kadlaginvestment.com','www.kadlaginvestment.com']
+ALLOWED_HOSTS = ['139.59.28.237',
+                 'kadlaginvestment.com', 'www.kadlaginvestment.com']
 
 
 # Application definition
@@ -118,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-STATIC_URL = 'static/'
+STATIC_URL = '/home/aditya/KadlagInvestment-Website/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static/web/",
