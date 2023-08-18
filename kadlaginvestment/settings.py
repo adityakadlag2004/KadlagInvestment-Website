@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-xk8)mp%*7#do0&o4_*96y9fd7h1n&b*v3d7mubu0af)l9k+1@v
 DEBUG = False
 
 # ALLOWED_HOSTS = ['*']
+
 ALLOWED_HOSTS = ['139.59.28.237',
                  'kadlaginvestment.com', 'www.kadlaginvestment.com']
 
@@ -129,7 +130,6 @@ STATIC_URL = 'staticfiles/'
 STATICFILES_DIRS = [
     BASE_DIR / "static/web/",
 ]
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
