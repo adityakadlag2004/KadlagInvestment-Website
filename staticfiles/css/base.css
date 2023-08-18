@@ -16,9 +16,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
 header {
     position: fixed;
+    background: white;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 40px 60px;
+    padding: 18px 28px;
     z-index: 10000;
 }
 
@@ -80,7 +80,7 @@ nav ul {
 
 
 
-@media (max-width: 640px) {
+@media (max-width:480px) {
     .pc-hide {
         display: flex;
     }
@@ -90,7 +90,15 @@ nav ul {
     }
 
     header {
-        position: relative;
+        position: fixed;
+        background: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 18px 28px;
+        z-index: 10000;
     }
 
     .container {
@@ -367,6 +375,15 @@ header.sticky ul li a {
 
     header {
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 40px 60px;
+        z-index: 10000;
     }
 
     .container {
@@ -515,6 +532,22 @@ header.sticky ul li a {
 
 }
 
+
 /* Navbar End*/
 
 /* main body */
+
+@media(min-width:1200px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 40px 60px;
+        z-index: 10000;
+    }
+}

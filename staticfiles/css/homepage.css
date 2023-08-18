@@ -2,674 +2,338 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-
-body {
+  }
+  
+  
+  body {
     display: flex;
     flex-direction: column;
-}
-
-
-
-/* Page Body */
-.homepagediv {
-    display: flex;
+  }
+  
+  /* DEFAULT CSS */
+  /* DEFAULT CSS */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-top: 100px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Typewritter */
-.typewritterdiv {
     display: flex;
-    min-height: 100vh;
-    width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    transition: 0.6s;
+    padding: 24px 30px;
+    z-index: 10000;
+  }
+  
+  .mainbody {
+    display: flex;
     flex-direction: column;
-}
-
-
-
-
-.typewritterdiv span {
-    display: inline-block;
-    font-size: 2.5em;
-    color: black;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    animation: typing 2s steps(22);
-    animation-fill-mode: forwards;
-}
-
-/* Try Out CSS */
-/* Try Out CSS */
-.wrapper {
-    height: 15vh;
-    width: fit-content;
-    /*This part is important for centering*/
-    display: grid;
-    place-items: center;
-}
-
-.typing-demo span {
-    width: 100%;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    text-align: center;
-    font-size: 2em;
-}
-
-@keyframes typing {
-    from {
-        width: 0%
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
-    }
-}
-
-
-
-.typewritterdiv p {
-    color: gray;
+    align-items: center;
+  }
+  
+  .typewritterdiv {
+    display: flex;
+    width: 80%;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
     margin: 10px;
-    font-size: 1.2em;
-}
-
-.div-button {
+    margin-top: 12rem;
+  }
+  
+  .typewritterdiv span {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .typewritterdiv p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .typewritterdiv button {
     background: black;
     color: white;
-    padding: 10px;
+    font-size: 1rem;
     border-radius: 22px;
-    margin: 1rem;
     text-align: center;
-    cursor: pointer;
+    padding: 0.6rem;
     width: 8rem;
-}
-
-.div-button:hover {
-    animation: hoverBtnChange 1s forwards;
-}
-
-
-@keyframes hoverBtnChange {
-    to {
-        color: black;
-        background: white;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
-    }
-
-    form {
-        color: white;
-        background: black;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.00);
-    }
-}
-
-@keyframes hoverBtnChangeNormal {
-    to {
-        color: white;
-        background: black;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.00);
-    }
-
-    form {
-        color: black;
-        background: white;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30);
-    }
-}
-
-
-
-/* Typewritter End*/
-
-/* Mutual Fund Div */
-.mutualfunddiv {
+    margin-top: 1rem;
+    outline: none;
+  }
+  
+  header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    margin-left: 6px;
+  }
+  
+  .contentdiv {
     display: flex;
+    min-height: 200vh;
     flex-direction: column;
     width: 100%;
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.mutusub1 {
+    justify-content: space-evenly;
+    border: 4px solid rebeccapurple;
+    margin-top: 50vh;
+  }
+  
+  .divmain {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .divmain .subdiv {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 2rem;
-}
-
-.mutusub1 h1 {
-    font-size: 3em;
-}
-
-.mutusub1 img {
-    object-fit: cover;
-    width: 680px;
-    height: 680px;
-}
-
-.mutusub1 p {
-    padding: 3rem;
-    line-height: 2.4rem;
-    line-break: auto;
-    font-size: 1.6rem;
-}
-
-#hiddenmf {
-    display: hidden;
-}
-
-
-
-/* media */
-@media (max-width: 2000px) {
-    .mutualfunddiv {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 50vh;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .mutusub1 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .mutusub1 img {
-        object-fit: cover;
-        width: 520px;
-        height: 520px;
-    }
-
-    .mutusub1 p {
-        padding-left: 1.5rem;
-        line-height: 2rem;
-        line-break: auto;
-        font-size: 1.2rem;
-    }
-
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-    .typewritterdiv span {
-        display: inline-block;
-        font-size: 2.5em;
-        color: black;
-        position: relative;
-        text-align: center;
-        white-space: break-spaces;
-        overflow: hidden;
-        width: 80%;
-        animation: none;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .typewritterdiv p {
-        margin-top: 1rem;
-    }
-
-    .typing-demo span {
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-
-    .container-nav {
-        width: 100%;
-    }
-
-    header {
-        position: fixed;
-        background: white;
-    }
-
-    header .logo {
-        margin-left: 0px;
-        font-size: 1.2em;
-    }
-
-    nav li {
-        margin: 0.3rem;
-    }
-
-    header div nav ul li {
-        font-size: 1.2rem;
-    }
-
-    header div nav ul {
-        margin-top: 10px;
-    }
-
-    .homepagediv {
-        display: none;
-    }
-
-    .typewritterdiv {
-        display: flex;
-        width: 100%;
-        min-height: max-content;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 14rem;
-    }
-
-    .typewritterdiv p {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .div-button {
-        margin-top: 10px;
-    }
-
-    .typewritterdiv span {
-        font-size: 1.3em;
-        color: black;
-        position: relative;
-        text-align: center;
-    }
-
-    .mutualfunddiv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .mutusub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .mutusub1 img {
-        width: 240px;
-        height: 250px;
-
-    }
-
-    .mutusub1 p {
-        padding: 0px;
-        margin: 0px;
-        padding-left: 0rem;
-        line-height: 1.6rem;
-        line-break: auto;
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-}
-
-/* media */
-
-
-/* Mutual Fund Div End */
-/* Insurance Fund Div Start */
-.insurancediv {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.insusub1 {
+    margin-top: 1rem;
+  }
+  
+  .divmain .subdivrev {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    padding: 2rem;
-}
-
-.insusub1 h1 {
-    font-size: 3em;
-}
-
-.insusub1 img {
+    margin-top: 1rem;
+  }
+  
+  .divmain h1 {
+    display: inline-block;
+    margin: auto;
+  }
+  
+  .divmain .subdiv img {
+    object-fit: cover;
+    width: 640px;
+    height: 640px;
+    margin: 1rem;
+  }
+  
+  .divmain .subdivrev img {
     object-fit: cover;
     width: 680px;
     height: 680px;
-}
-
-.insusub1 p {
-    padding: 3rem;
-    line-height: 2.4rem;
-    line-break: auto;
-    font-size: 1.6rem;
-}
-
-.insurancediv span {
-    color: black;
-    font-size: 2rem;
-
-}
-
-@media (max-width: 2000px) {
-    .insurancediv {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 50vh;
-        ;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
+  }
+  
+  .divmain .subdiv p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    align-self: center;
+    margin: 1rem;
+  }
+  
+  .divmain .subdivrev p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    align-self: center;
+    margin: 1rem;
+  }
+  
+  /* DEFAULT CSS */
+  /* DEFAULT CSS */
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 480px) {
+    .typewritterdiv {
+      margin-top: 120px;
+      text-align: center;
     }
-
-    .insusub1 {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .insusub1 img {
-        object-fit: cover;
-        width: 520px;
-        height: 520px;
-        border-radius: 22px;
-    }
-
-    .insusub1 p {
-        line-height: 2rem;
-        font-size: 1.2rem;
-        margin-right: 1.5rem;
-        line-break: strict;
-    }
-
-    .insurancediv span {
-        color: black;
-        font-size: 1rem;
-
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-    .insurancediv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .insusub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .insusub1 img {
-        width: 120px;
-        height: 120px;
-
-    }
-
-    .insusub1 p {
-        padding: 0px;
-        margin: 0px;
-        padding-left: 0rem;
-        line-height: 1.8rem;
-        line-break: auto;
-        font-size: 1.2rem;
-        margin-top: 10px;
-    }
-
-    .insurancediv span {
-        color: black;
-        font-size: 1rem;
-        text-align: center;
-    }
-}
-
-/* Insurance  Div End */
-
-/* Mediclaim  Div Start */
-.mediclaimdiv {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 50vh;
-    ;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.medisub1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2rem;
-}
-
-.medisub1 h1 {
-    font-size: 3em;
-}
-
-.medisub1 img {
-    object-fit: cover;
-    width: 680px;
-    height: 680px;
-}
-
-.medisub1 p {
-    padding: 3rem;
-    line-height: 2.4rem;
-    line-break: auto;
-    font-size: 1.6rem;
-}
-
-.mediclaimdiv span {
-    color: black;
-    font-size: 2rem;
-
-}
-
-/* media */
-@media (max-width: 2000px) {
-    .mediclaimdiv {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 50vh;
-        ;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .medisub1 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .medisub1 img {
-        object-fit: cover;
-        width: 520px;
-        height: 520px;
-    }
-
-    .medisub1 p {
-        padding-left: 1.5rem;
-        line-height: 2rem;
-        line-break: auto;
-        font-size: 1.2rem;
-    }
-
-    .mediclaimdiv span {
-        color: black;
-        font-size: 1rem;
-
-    }
-}
-
-@media (max-width: 640px) {
-    .mediclaimdiv {
-        display: flex;
-        flex-direction: column;
-        ;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .medisub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .medisub1 img {
-        width: 120px;
-        height: 120px;
-
-    }
-
-    .medisub1 p {
-        padding: 0px;
-        margin: 0px;
-        padding-left: 0rem;
-        line-height: 1.8rem;
-        line-break: auto;
-        font-size: 1.2rem;
-        margin-top: 10px;
-    }
-
-    .mediclaimdiv span {
-        color: black;
-        font-size: 1rem;
-        text-align: center;
-
-    }
-}
-
-/* Mediclaim  Div End */
-
-/* Media Query for Tablets Ipads portrait mode */
-/*@media (min-width: 768px) and (max-width: 1024px) {}*/
-@media (min-width: 481px) and (max-width: 1024px) {
-    .typewritterdiv .wrapper {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
+  
     .typewritterdiv span {
-        display: inline-block;
-        font-size: 2em;
-        color: black;
-        position: relative;
-        text-align: center;
-        white-space: pre-wrap;
-        overflow: visible;
-        width: 80%;
-        animation: none;
-        /* animation-fill-mode: forwards; */
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: 100%;
     }
-
+  
     .typewritterdiv p {
-        text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+      width: 100%;
+      margin-top: 0.6rem;
     }
-
-
-    .typing-demo span {
-        display: inline-block;
-        width: 100%;
-        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-        border-right: 3px solid;
-        text-align: center;
-        font-size: 2em;
-        white-space: pre-wrap;
-        overflow: auto;
+  
+    .typewritterdiv button {
+      background: black;
+      color: white;
+      font-size: 1rem;
+      border-radius: 22px;
+      text-align: center;
+      padding: 0.6rem;
+      width: 8rem;
+      margin-top: 1rem;
+      outline: none;
     }
-
-    .homepagediv {
-        padding-top: 0px;
+  
+    header .logo {
+      position: relative;
+      font-weight: 700;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: 0.6s;
+      margin-left: 6px;
     }
-
-    .mutusub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
+  
+    .contentdiv {
+      display: flex;
+      min-height: 200vh;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-evenly;
+      border: 4px solid rebeccapurple;
+      margin-top: 1rem;
     }
-
-    .mutusub1 p {
-        text-align: center;
+  
+    .divmain {
+      display: flex;
+      flex-direction: column;
+      border: 4px solid red;
+      align-items: center;
+      justify-content: center;
     }
-
-    .insusub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
+  
+    .divmain .subdiv {
+      display: flex;
+      flex-direction: column;
     }
-
-    .insusub1 p {
-        text-align: center;
+  
+    .divmain .subdivrev {
+      display: flex;
+      flex-direction: column;
     }
-
-    .medisub1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
+  
+    .divmain .subdiv img {
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      width: 240px;
+      height: 240px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
-
-    .medisub1 p {
-        text-align: center;
+  
+    .divmain .subdivrev img {
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      width: 240px;
+      height: 240px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
-
-    .mediclaimdiv span {
-        color: black;
-        text-align: center;
-        font-weight: 400;
-
+  
+    .divmain .subdiv p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 1.5rem;
     }
-
-    .insurancediv span {
-        color: black;
-        text-align: center;
-        font-weight: 400;
-
+  
+    .divmain .subdivrev p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 1.5rem;
     }
-
-    header.sticky ul li a {
-        color: black;
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  /*@media (min-width: 768px) and (max-width: 1024px) {}*/
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .contentdiv {
+      display: flex;
+      min-height: 200vh;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-evenly;
+      border: 4px solid rebeccapurple;
+      margin-top: 1rem;
     }
-}
-
-
+  
+    .divmain {
+      display: flex;
+      flex-direction: column;
+      border: 4px solid red;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .divmain .subdiv {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .divmain .subdivrev {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .divmain .subdiv img {
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      width: 420px;
+      height: 420px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .divmain .subdivrev img {
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      width: 420px;
+      height: 420px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .divmain .subdiv p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 1.5rem;
+    }
+  
+    .divmain .subdivrev p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+  
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px) {}
+  
+  /* Media Query for Large screens */
+  @media (min-width: 2560px) {
+    .divmain .subdivrev p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 2.4rem;
+    }
+    .divmain .subdiv p {
+      text-align: center;
+      margin: 1.6rem;
+      padding: 1rem;
+      line-height: 2.4rem;
+    }
+  }

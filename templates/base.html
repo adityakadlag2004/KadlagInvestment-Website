@@ -16,60 +16,61 @@
     {% block style %}
     {% endblock style %}
 </head>
+<header>
+    <div class="container container-nav">
+        <div class="logodiv">
+            <img src="{% static '/images/logo_main.png' %}" alt="" class="imglogo">
+            <a href="" class="logo">Kadlag Investment</a>
+            <label for="check" class="pc-hide" id="nav-open-close" onclick="toggleNavBtn()">
+                <input type="checkbox" id="check" />
+                <span class="crosselem"></span>
+                <span class="crosselem"></span>
+                <span class="crosselem"></span>
+            </label>
+        </div>
+
+        <nav class="navMain phone-hide">
+            <ul class="phone-hide navUl">
+                <li><a href="{% url 'Home:HOME' %}">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <!-- <input type="text" name="" id="" class="textBox" placeholder="Services" readonly> -->
+                        <span class="textBox">Services</span>
+                        <div class="option">
+
+                            <div class="serviceitem" onclick="show('Mutual Funds')">
+                                <div class="optionimageicon" onclick="scrollToDiv('mutualfunddiv1')">
+                                    <img src="{% static '/images/mutuicon2.png' %}" alt="" class="optionimage">
+                                    Mutual Funds
+                                </div>
+                            </div>
+
+
+                            <div class="serviceitem" onclick="show('Insurance')">
+                                <div class="optionimageicon" onclick="scrollToDiv('insurancediv1')"><img
+                                        src="{% static '/images/insurance.png' %}" alt="" class="optionimage">Life
+                                    Insurance</div>
+                            </div>
+                            <div class="serviceitem" onclick="show('Mediclaim')">
+                                <div class="optionimageicon" onclick="scrollToDiv('mediclaimdiv1')"><img
+                                        src="{% static '/images/mediclaim.png' %}" alt="" class="optionimage">Mediclaim
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="{% url 'Home:ABOUT_US' %}">About</a></li>
+                <li><a href="{% url 'Home:CONTACT_US' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
 
 <body class="font-mono">
     <!-- Full screen Navbar -->
-    <header>
-        <div class="container container-nav">
-            <div class="logodiv">
-                <img src="{% static '/images/logo_main.png' %}" alt="" class="imglogo">
-                <a href="" class="logo">Kadlag Investment</a>
-                <label for="check" class="pc-hide" id="nav-open-close" onclick="toggleNavBtn()">
-                    <input type="checkbox" id="check" />
-                    <span class="crosselem"></span>
-                    <span class="crosselem"></span>
-                    <span class="crosselem"></span>
-                </label>
-            </div>
 
-            <nav class="navMain phone-hide">
-                <ul class="phone-hide navUl">
-                    <li><a href="{% url 'Home:HOME' %}">Home</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <!-- <input type="text" name="" id="" class="textBox" placeholder="Services" readonly> -->
-                            <span class="textBox">Services</span>
-                            <div class="option">
-
-                                <div class="serviceitem" onclick="show('Mutual Funds')">
-                                    <div class="optionimageicon" onclick="scrollToDiv('mutualfunddiv1')">
-                                        <img src="{% static '/images/mutuicon2.png' %}" alt="" class="optionimage">
-                                        Mutual Funds
-                                    </div>
-                                </div>
-
-
-                                <div class="serviceitem" onclick="show('Insurance')">
-                                    <div class="optionimageicon" onclick="scrollToDiv('insurancediv1')"><img
-                                            src="{% static '/images/insurance.png' %}" alt="" class="optionimage">Life
-                                        Insurance</div>
-                                </div>
-                                <div class="serviceitem" onclick="show('Mediclaim')">
-                                    <div class="optionimageicon" onclick="scrollToDiv('mediclaimdiv1')"><img
-                                            src="{% static '/images/mediclaim.png' %}" alt=""
-                                            class="optionimage">Mediclaim</div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="{% url 'Home:ABOUT_US' %}">About</a></li>
-                    <li><a href="{% url 'Home:CONTACT_US' %}">Contact Us</a></li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
 
     {% block body %}
     {% endblock body %}
